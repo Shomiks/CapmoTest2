@@ -160,10 +160,6 @@ function App() {
         setHighlightArray(highlightArrayNew);
     };
 
-    const addNewItem = () => {
-        console.log('a')
-    }
-
     const renderSearchItem = () => searchArray && mealArray.map((item, index) => <SearchItem
         onClick={() => highlightMeal(item)}
         key={index + "_"}>{item.name}</SearchItem>);
@@ -176,7 +172,6 @@ function App() {
                 subheader={
                     <ListSubheader component="div" id="nested-list-subheader">
                         Restaurant Menu
-                        <AddCircleIcon onClick={addNewItem}/>
                     </ListSubheader>
                 }
                 className={classes.root}
